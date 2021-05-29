@@ -18,11 +18,11 @@ spring:
     password: ea58c0211e7314e5ec06ee8f46bed139aea2d0a620ee5e4ca295d9669c5b051a
   jpa:
 #    database-platform=org: hibernate.dialect.MySQL5InnoDBDialect
-    database-platform=org: org.hibernate.dialect.PostgreSQLDialect
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
     show-sql: true
     generate-ddl: true
     hibernate:
-      ddl-auto: none
+      ddl-auto: update
 
 application:
   description: Projeto criado para o bootcamp DIO - Santander
