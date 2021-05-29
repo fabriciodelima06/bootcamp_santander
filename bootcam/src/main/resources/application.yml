@@ -4,22 +4,25 @@ server:
     context-path: /bootcamp
 
 spring:
-#-- my sql --
 #  datasource:
 #    driver-class-name: com.mysql.cj.jdbc.Driver
-  #    url: jdbc:mysql://localhost:3306/bootcamp
-  #    username: root
-  #    password: root
-#-- postgre --
+#    url: jdbc:mysql://localhost:3306/bootcamp
+#    username: root
+#    password: root
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: postgres://bqkyzzuvnjtrbx:ea58c0211e7314e5ec06ee8f46bed139aea2d0a620ee5e4ca295d9669c5b051a@ec2-34-202-54-225.compute-1.amazonaws.com:5432/d4eq3urrhtnf4l
-    username: bqkyzzuvnjtrbx
-    password: ea58c0211e7314e5ec06ee8f46bed139aea2d0a620ee5e4ca295d9669c5b051a
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: root
+#  datasource:
+#    driver-class-name: org.postgresql.Driver
+#    url: postgres://bqkyzzuvnjtrbx:ea58c0211e7314e5ec06ee8f46bed139aea2d0a620ee5e4ca295d9669c5b051a@ec2-34-202-54-225.compute-1.amazonaws.com:5432/d4eq3urrhtnf4l
+#    username: bqkyzzuvnjtrbx
+#    password: ea58c0211e7314e5ec06ee8f46bed139aea2d0a620ee5e4ca295d9669c5b051a
   jpa:
-#    database-platform=org: hibernate.dialect.MySQL5InnoDBDialect
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
     show-sql: true
+    #    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
     generate-ddl: true
     hibernate:
       ddl-auto: update
